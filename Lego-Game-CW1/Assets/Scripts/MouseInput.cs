@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseInput : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float speed = 10f;
     void Start()
     {
         
@@ -15,6 +17,14 @@ public class MouseInput : MonoBehaviour
     }
     void OnMouseDrag()
     {
-        Debug.Log("Mouse is Dragging!");
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
+        Vector3 movement = new Vector3(mouseX, 0f, mouseY);
+        Vector3 displacement = movement * speed * Time.deltaTime;
+
+        transform.Translate(displacement, Space.World);
+
+        Debug.Log(movement);
     }
 }
