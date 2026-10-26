@@ -23,8 +23,11 @@ public class MouseInput : MonoBehaviour
         Vector3 movement = new Vector3(mouseX, 0f, mouseY);
         Vector3 displacement = movement * speed * Time.deltaTime;
 
-        transform.Translate(displacement, Space.World);
+        //transform.Translate(displacement, Space.World);
 
-        Debug.Log(movement);
+        float depth = Camera.main.WorldToScreenPoint(transform.position).z;
+        Debug.Log($"Camera depth: {depth}");
+
+        //Debug.Log(movement);
     }
 }
