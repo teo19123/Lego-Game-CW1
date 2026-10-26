@@ -29,6 +29,8 @@ public class MouseInput : MonoBehaviour
         Vector3 mouseScreenPosition = Input.mousePosition;
         mouseScreenPosition.z = depth;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        Vector3 targetPosition = new Vector3(worldPosition.x, transform.position.y, worldPosition.z);
+        transform.position = targetPosition;
         Debug.Log($"World position: {worldPosition}");
         //Debug.Log(mouseScreenPosition);
         //Debug.Log($"Camera depth: {depth}");
