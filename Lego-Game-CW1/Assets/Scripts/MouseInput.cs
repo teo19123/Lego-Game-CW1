@@ -26,7 +26,12 @@ public class MouseInput : MonoBehaviour
         //transform.Translate(displacement, Space.World);
 
         float depth = Camera.main.WorldToScreenPoint(transform.position).z;
-        Debug.Log($"Camera depth: {depth}");
+        Vector3 mouseScreenPosition = Input.mousePosition;
+        mouseScreenPosition.z = depth;
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        Debug.Log($"World position: {worldPosition}");
+        //Debug.Log(mouseScreenPosition);
+        //Debug.Log($"Camera depth: {depth}");
 
         //Debug.Log(movement);
     }
