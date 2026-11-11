@@ -866,8 +866,8 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 2.29, z: -10.62}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -1.4330001, y: 1.61, z: -14.17}
+  m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2562,7 +2562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: -2.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2607,7 +2607,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1508489474}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1508489473}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1508489472}
   m_SourcePrefab: {fileID: 100100000, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
 --- !u!1001 &862070945
 PrefabInstance:
@@ -3052,7 +3061,7 @@ GameObject:
   - component: {fileID: 1044750000}
   - component: {fileID: 1044750006}
   m_Layer: 3
-  m_Name: Player
+  m_Name: PlayerTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4212,6 +4221,66 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -36, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1508489471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 08c1637e6ff221547a2aec5b112cf2a3, type: 3}
+  m_PrefabInstance: {fileID: 833497359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1508489472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508489471}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3620fd367fe11a94d8df07dfcd8b61a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMouseLook
+  sensitivity: 0.15
+  invertY: 0
+  minimumPitch: -20
+  maximumPitch: 70
+  startingPitch: 26.565
+--- !u!114 &1508489473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508489471}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e5342545ff2b24b93a2dfc73d1c346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  playerSpeed: 10
+--- !u!143 &1508489474
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508489471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.01
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1521056596
 GameObject:
   m_ObjectHideFlags: 0
